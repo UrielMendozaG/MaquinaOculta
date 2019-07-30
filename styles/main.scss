@@ -1,0 +1,93 @@
+$colors : (
+    primary: #F2E63D,
+    secondary: #000000
+);
+
+body, html {
+    height: 100%;
+    font-family: 'Raleway', sans-serif;
+}
+
+$padding : 15px;
+$desktop:  840px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}){
+        @content; 
+    }
+}
+
+body {
+    margin: 0;
+
+    #background-yellow{
+        clip-path: polygon(100% 0, 100% 92%, 84% 100%, 0 100%, 0 0);
+        background-color: map-get($map: $colors, $key: primary );
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+
+        @include desktop{
+            clip-path: polygon(100% 0, 100% 78%, 86% 100%, 0 100%, 0 0);
+        }
+    }
+    
+    #background-black{
+        
+        background-color: map-get($map: $colors, $key: secondary );
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -2;
+    }
+
+    header {
+
+        @include desktop{
+            display: block;
+            box-shadow: none;
+            padding: 4em;
+            font-size: 34;
+        }
+
+
+        font-size: 20;
+        color: map-get($map: $colors, $key: secondary);
+        padding: 15px 15px 15px 15px;
+
+        display: block;
+        text-decoration: uppercase;
+        text-align: center;
+        box-shadow: 0 5px 5px 0 
+              rgba(0,0,0, .1);
+    }
+
+    h2 {
+        margin: 0;
+    }
+
+    #moody {
+        
+        
+        
+        //poner un ojo aqui esta hecho con codigo queda pendiente
+      
+
+        img{
+            display: block;
+            padding: 250px 0px 0px 0px;
+            margin: auto;
+            height: 6em;
+            width: 12em;
+
+            @include desktop{
+                height: 6em;
+                width: 12em;
+                padding: 0;
+            }
+        }
+       
+    }
+   
+}

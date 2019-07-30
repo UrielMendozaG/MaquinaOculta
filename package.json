@@ -1,0 +1,22 @@
+{
+  "name": "maquinaoculta",
+  "version": "1.0.0",
+  "description": "Maquina Oculta is my new love!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vumg/MaquinaOculta.git"
+  },
+  "keywords": [
+    "interactive"
+  ],
+  "author": "Ovni vivo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vumg/MaquinaOculta/issues"
+  },
+  "homepage": "https://github.com/vumg/MaquinaOculta#readme"
+}
